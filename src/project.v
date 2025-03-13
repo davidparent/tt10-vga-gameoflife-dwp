@@ -1,7 +1,3 @@
-/*
- * Copyright (c) 2024 Your Name
- * SPDX-License-Identifier: Apache-2.0
- */
 
 `default_nettype none
 
@@ -16,7 +12,7 @@ module tt_um_game_life (
     input  wire       rst_n     // reset_n - low to reset
 );
 
-/ VGA signals
+
 wire hsync;
 wire vsync;
 wire [1:0] R;
