@@ -9,12 +9,11 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works Miminmu change to stop doc fail.
+Random
 
 ## How to test
 
-Explain how to use your project
-
+VGA PMOD
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+PMOS VGA and sound
