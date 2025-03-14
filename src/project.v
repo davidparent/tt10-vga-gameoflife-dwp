@@ -39,6 +39,16 @@ assign uio_oe  = 0;
 
 // Suppress unused signals warning
 wire _unused_ok = &{ena, ui_in, uio_in};
+hvsync_generator hvsync_gen(
+  .clk(clk),
+  .reset(~rst_n),
+  .hsync(hsync),
+  .vsync(vsync),
+  .display_on(video_active),
+  .hpos(pix_x),
+  .vpos(pix_y)
+);
+    
 
 // high when the pixel belongs to the simulation rectangle
 wire frame_active;
