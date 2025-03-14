@@ -58,4 +58,3 @@ module hvsync_generator(clk, reset, hsync, vsync, display_on, hpos, vpos);
 
 endmodule
 
-`endif
