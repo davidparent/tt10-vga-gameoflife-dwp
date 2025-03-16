@@ -60,7 +60,7 @@ assign icon_pixel = icon[pix_y[2:0]][pix_x[2:0]];
 
 // compute index into board state
 wire [10:0] cell_index;
-    assign cell_index = (pix_y[8:3] << 6) | pix_x[8:3];
+      assign cell_index =11'(pix_y[7:3] << 6) |11'( pix_x[8:3]);
 
 // generate RGB signals
 assign R = (video_active & frame_active) ? {board_state[cell_index] & icon_pixel, 1'b1} : 2'b00;
