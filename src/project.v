@@ -201,17 +201,17 @@ always @(posedge clk) begin
       end
 
       3: begin // (-1, 0)
-          num_neighbors <= num_neighbors + 4('board_state[((cell_y + 0) & HEIGHT_MASK) << logWIDTH | ((cell_x - 1) & WIDTH_MASK)]);
+          num_neighbors <= num_neighbors + 4'(board_state[((cell_y + 0) & HEIGHT_MASK) << logWIDTH | ((cell_x - 1) & WIDTH_MASK)]);
         neigh_index <= neigh_index + 1;
       end
 
       4: begin // (+1, 0)
-          num_neighbors <= num_neighbors + 4('board_state[((cell_y + 0) & HEIGHT_MASK) << logWIDTH | ((cell_x + 1) & WIDTH_MASK)]);
+          num_neighbors <= num_neighbors + 4'(board_state[((cell_y + 0) & HEIGHT_MASK) << logWIDTH | ((cell_x + 1) & WIDTH_MASK)]);
         neigh_index <= neigh_index + 1;
       end
 
       5: begin // (-1, -1)
-          num_neighbors <= num_neighbors + 4('board_state[((cell_y - 1) & HEIGHT_MASK) << logWIDTH | ((cell_x - 1) & WIDTH_MASK)]);
+          num_neighbors <= num_neighbors + 4'(board_state[((cell_y - 1) & HEIGHT_MASK) << logWIDTH | ((cell_x - 1) & WIDTH_MASK)]);
         neigh_index <= neigh_index + 1;
       end
 
