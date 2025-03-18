@@ -59,8 +59,8 @@ wire icon_pixel;
 assign icon_pixel = icon[pix_y[2:0]][pix_x[2:0]];
 
 // compute index into board state
-    wire [10:0] cell_index;
-    assign cell_index =11'(pix_y[7:3]) << 6 |11'( pix_x[8:3]);
+    wire [11:0] cell_index;
+    assign cell_index =12'(pix_y[7:3]) << 6 |12'( pix_x[8:3]);
 
 // generate RGB signals
 assign R = (video_active & frame_active) ? {board_state[cell_index] & icon_pixel, 1'b1} : 2'b00;
@@ -77,7 +77,7 @@ assign boot_reset = ~rst_n;
 
 // ----------------- SIMULATION PARAMS -------------------------
 
-localparam logWIDTH = 6, logHEIGHT = 5;         // 64x32 board
+localparam logWIDTH = 6, logHEIGHT = 6;         // 64x32 board
 localparam UPDATE_INTERVAL = CLOCK_FREQ / 10;   // 5 Hz simulation update
 
 localparam WIDTH = 2 ** logWIDTH;
