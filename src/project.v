@@ -216,7 +216,7 @@ always @(posedge clk) begin
       end
 
       6: begin // (0, -1)
-          num_neighbors <= num_neighbors + 4'(board_state[((cell_y - 1) & HEIGHT_MASK) << logWIDTH | ((cell_x + 0) & WIDTH_MASK)];
+          num_neighbors <= num_neighbors + 4'(board_state[((cell_y - 1) & HEIGHT_MASK) << logWIDTH | ((cell_x + 0) & WIDTH_MASK)]);
         neigh_index <= neigh_index + 1;
       end
 
