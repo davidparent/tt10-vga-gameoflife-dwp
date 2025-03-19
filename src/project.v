@@ -228,7 +228,7 @@ always @(posedge clk) begin
       // this state (neigh_index = 8) is used to compute the new state of the current cell
       // according to the rules of Conway's Game of Life
       8: begin
-          board_state_next[index3] <= 1'(4'(board_state[index3] && (num_neighbors == 2)) | 4'((num_neighbors == 3));
+          board_state_next[index3] <= 1'(4'(board_state[index3] && (num_neighbors == 2)) | 4'((num_neighbors == 3)));
 
         neigh_index <= 0;
         num_neighbors <= 0;
